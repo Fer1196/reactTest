@@ -14,8 +14,6 @@ interface FiltersContext {
 export const FilterContext = createContext<FiltersContext>({
   filters: {
     category: "all",
-    price: 0,
-    searchWord: "",
   },
   setFilters: () => {},
   products: [],
@@ -28,8 +26,6 @@ export function FiltersProvider({
 }) {
   const [filters, setFilters] = useState<Filter>({
     category: "all" as string,
-    price: 0,
-    searchWord: "",
   });
 
   const [productList, setProductList] = useState<Product[]>([]);
